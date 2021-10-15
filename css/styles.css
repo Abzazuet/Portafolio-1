@@ -1,0 +1,193 @@
+html {
+  box-sizing: border-box;
+  /*no agregar padding*/
+  font-size: 62.5%;
+  /*Reset para REMS - 62.5%=10 px de 16px*/
+}
+*,
+*:before,
+*::after {
+  box-sizing: inherit;
+}
+header {
+  font-size: 2.5rem;
+}
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 2;
+  color: black;
+  height: 100%;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  color: white;
+  text-decoration: none;
+}
+img{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #0089e8;
+  border-bottom: solid #414141;
+  padding-left: 2rem;
+}
+.nombre {
+  justify-content: start;
+  color: white;
+}
+.navegacion {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+.navegacion li {
+  margin-right: 2rem;
+}
+.navegacion a {
+  color: white;
+  font-size: 2rem;
+}
+.navegacion a:hover {
+  color: #174363;
+}
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  background-color: #595a5c;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  bottom: 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+#welcome-section h1{
+  font-size: 5rem;
+}
+#welcome-section p {
+  color: #0089e8;
+  margin-top: 0;
+  font-size: 3rem;
+  font-style: italic;
+}
+#projectsHTMLCSS{
+  background-color: #ca6641;
+  margin-top: -2rem;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
+#projects h1{
+  text-decoration: underline dotted;
+}
+.contenedor-proyecto{
+  display: flex;
+  flex-direction: column;
+}
+.project-tile{
+  display: flex;
+  flex-direction: column;
+  background-color: #595a5c;
+  margin: 0 .4rem 2rem 0;
+  transition: all 0.2s ease-in-out;
+  border: solid 2px rgb(37, 36, 36);
+  font-size: 1.5rem;
+  color: white;
+}
+.project-tile:hover{
+  transform: scale(1.15);
+  
+}
+.parentesis:hover{
+  color: #0089e8;
+}
+.parentesis:hover::before{
+  content: "<";
+  color: #0089e8;
+}
+.parentesis:hover::after{
+  content: ">";
+  color: #0089e8;
+}
+
+
+#contact{
+  margin-top: -2rem;
+  background-color: #595a5c;
+  padding: 2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.conocenos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  font-size: 2rem;
+}
+.paginas{
+  transition: all 0.2s ease-in-out;
+  padding: 1rem;
+}
+.paginas:hover{
+  transform: scale(1.25);
+  color: #0089e8;
+}
+.paginas:hover a{
+  transform: scale(1.5);
+  color: #0089e8;
+}
+
+
+@media (min-width: 800px) {
+  .contenedor-proyecto{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+  .project-tile{
+    display: flex;
+    flex-direction: column;
+    background-color: #595a5c;
+    margin: 0 .4rem 2rem 0;
+    transition: all 0.2s ease-in-out;
+    border: solid 2px rgb(37, 36, 36);
+    padding-bottom: 3rem;
+  }
+  .conocenos{
+    flex-direction: row;
+  }
+}
